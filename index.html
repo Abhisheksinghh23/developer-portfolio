@@ -60,7 +60,7 @@ h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin:0 0 8px;letter-spacing:-.5px}
 .links a:hover{border-color:var(--b)}
 .links .off{color:#74809f;border-style:dashed;font-weight:500}
 .feat{grid-column:1/-1;flex-direction:row}
-.feat .art{height:auto;min-width:300px;font-size:2.4rem;padding:0 12px}
+.feat .art{height:auto;min-width:300px;font-size:2.1rem;padding:0 14px;text-align:center;overflow-wrap:anywhere}
 .feat .body{padding:28px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:30px}
 .tl{border-left:2px solid var(--line);padding-left:22px;margin:0}
@@ -76,6 +76,11 @@ h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin:0 0 8px;letter-spacing:-.5px}
 .contact{text-align:center}
 .contact .cta{justify-content:center}
 footer{padding:28px 0;border-top:1px solid var(--line);color:var(--mute);text-align:center;font-size:.9rem}
+.mini{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;transition:.2s}
+.mini:hover{transform:translateY(-3px);border-color:#3b4b7c}
+.mini h3{margin:0 0 2px;font-size:1.08rem}
+.mini p{color:var(--mute);margin:8px 0 12px;font-size:.92rem}
+.grid.s{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
 @media(max-width:820px){
  .menu{display:block}
  nav ul{display:none;position:absolute;top:62px;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 16px 16px}
@@ -93,6 +98,8 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--mute);text-al
  <button class="menu" id="menu" aria-label="Toggle menu" aria-expanded="false">Menu</button>
  <nav><ul id="links">
   <li><a href="#projects">Projects</a></li>
+  <li><a href="#more">More</a></li>
+  <li><a href="#games">Games</a></li>
   <li><a href="#experience">Experience</a></li>
   <li><a href="#skills">Skills</a></li>
   <li><a href="#education">Education</a></li>
@@ -104,7 +111,7 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--mute);text-al
 <div class="hero"><div class="wrap">
  <span class="pill"><span class="dot"></span> Open to software developer roles across India</span>
  <h1>Hi, I'm Abhishek Kumar.<br><em>I build full-stack and AI-powered apps.</em></h1>
- <p class="lead">Information Science &amp; Engineering graduate (B.E., July 2026) from Bangalore. Two internships in backend APIs, ML and full-stack development. Below are seven projects you can open and try yourself, with the source code next to each one where it is public.</p>
+ <p class="lead">Information Science &amp; Engineering graduate (B.E., July 2026) from Bangalore. Two internships in backend APIs, ML and full-stack development. Below is a showcase of my projects: live demos where an app is deployed, and source code where the repository is public.</p>
  <div class="cta">
   <a class="btn p" href="#projects">See projects</a>
   <a class="btn" href="https://github.com/Abhisheksinghh23" target="_blank" rel="noopener">GitHub</a>
@@ -112,7 +119,7 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--mute);text-al
   <a class="btn" href="#contact">Contact</a>
  </div>
  <div class="stats">
-  <div><b>7</b><span>projects</span></div>
+  <div><b>20</b><span>projects</span></div>
   <div><b>2</b><span>internships</span></div>
   <div><b>5</b><span>languages</span></div>
   <div><b>8.2</b><span>CGPA</span></div>
@@ -121,7 +128,7 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--mute);text-al
 
 <section id="projects"><div class="wrap">
  <h2>Projects</h2>
- <p class="sub">Strongest first. Each card links to the live app and the source code. Where a link is missing, the card says why.</p>
+ <p class="sub">Strongest first. Each card links to the live app and the source code where they exist. Where a link is missing, the card says why.</p>
  <div class="grid">
 
  <article class="card feat">
@@ -134,7 +141,7 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--mute);text-al
    <p class="note">Demo limits: the chat is one public room, video calls may fail on some networks, payments are record-only, and the free host can take a minute to wake up.</p>
    <div class="links">
     <a class="live" href="https://devconnect-app-v2kx.onrender.com/" target="_blank" rel="noopener">Live demo ↗</a>
-    <a href="https://github.com/Abhisheksinghh23/DEVCONNECT" target="_blank" rel="noopener">Source on GitHub ↗</a>
+    <span class="off">Source: not public</span>
    </div>
   </div>
  </article>
@@ -226,7 +233,34 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--mute);text-al
  </article>
 
  </div>
- <p class="sub" style="margin-top:28px">More repositories, including internship-era and learning projects, are on <a style="color:var(--a)" href="https://github.com/Abhisheksinghh23?tab=repositories" target="_blank" rel="noopener">my GitHub profile ↗</a>.</p>
+ <p class="sub" style="margin-top:28px">More repositories are on <a style="color:var(--a)" href="https://github.com/Abhisheksinghh23?tab=repositories" target="_blank" rel="noopener">my GitHub profile ↗</a>.</p>
+</div></section>
+
+<section id="more" class="alt"><div class="wrap">
+ <h2>More projects</h2>
+ <p class="sub">Other full-stack work from my GitHub.</p>
+ <div class="grid">
+  <article class="mini"><span class="tag">Full-stack social app</span><h3>SocialConnect</h3><p>Social media app with registration and login, profiles with avatar upload, posts with image upload, likes, comments, follows and a feed. Next.js route handlers backed by Supabase (Postgres, Auth, Storage).</p><div class="chips"><span>Next.js</span><span>TypeScript</span><span>Tailwind</span><span>Supabase</span></div><div class="links"><a href="https://github.com/Abhisheksinghh23/social-connect" target="_blank" rel="noopener">GitHub ↗</a><span class="off">Live demo: not deployed</span></div></article>
+  <article class="mini"><span class="tag">Internship assignment (NimitAI)</span><h3>Meeting Transcript Signal Analyzer</h3><p>Paste a sales-call transcript and the app returns buying signals, objections and pricing concerns with exact quotes and a coaching tip for each. React frontend, Express backend, OpenAI GPT-4o-mini, with a demo mode when no key is set.</p><div class="chips"><span>React</span><span>Vite</span><span>Node.js</span><span>Express</span><span>OpenAI API</span></div><div class="links"><a class="live" href="https://nimitai.vercel.app" target="_blank" rel="noopener">Play / open ↗</a><a href="https://github.com/Abhisheksinghh23/nimitai" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+  <article class="mini"><span class="tag">Scheduling tool</span><h3>Smart Match Allocation System</h3><p>FastAPI and SQLite web app that assigns people to matches by rule: per-format limits, Test-match recovery days, next-day priority, admin overrides and transfers, close-day and an audit log. Includes a pytest suite.</p><div class="chips"><span>Python</span><span>FastAPI</span><span>SQLite</span><span>pytest</span></div><div class="links"><a href="https://github.com/Abhisheksinghh23/schedule_generator" target="_blank" rel="noopener">GitHub ↗</a><span class="off">Live demo: not available</span></div></article>
+ </div>
+</div></section>
+
+<section id="games"><div class="wrap">
+ <h2>Browser games</h2>
+ <p class="sub">Ten small games built as free demos. The chance games use pretend play credits only, with no deposits, cash-out or prizes, and show their win chance on screen. Neon Rail Runner and Rune Forge Duel are free skill games.</p>
+ <div class="grid s">
+  <article class="mini"><span class="tag">Chance game · play credits</span><h3>Ten-Sign Duel</h3><p>Pick one of ten symbols in a circle; each symbol beats the next three clockwise.</p><div class="chips"><span>Static site</span></div><div class="links"><a class="live" href="https://abhisheksinghh23.github.io/playcredit-ten-sign-duel/" target="_blank" rel="noopener">Play / open ↗</a><a href="https://github.com/Abhisheksinghh23/playcredit-ten-sign-duel" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+  <article class="mini"><span class="tag">Chance game · play credits</span><h3>Harbor Strike</h3><p>Hide-and-strike on a ten-cell circular harbor: a ship covers three adjacent cells, pick one to fire at.</p><div class="chips"><span>Static site</span></div><div class="links"><a class="live" href="https://abhisheksinghh23.github.io/playcredit-harbor-strike/" target="_blank" rel="noopener">Play / open ↗</a><a href="https://github.com/Abhisheksinghh23/playcredit-harbor-strike" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+  <article class="mini"><span class="tag">Chance game · play credits</span><h3>Number Card</h3><p>Build a card of three different numbers from 1 to 10, then one number is drawn; match it to win.</p><div class="chips"><span>Static site</span></div><div class="links"><a class="live" href="https://abhisheksinghh23.github.io/playcredit-number-card/" target="_blank" rel="noopener">Play / open ↗</a><a href="https://github.com/Abhisheksinghh23/playcredit-number-card" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+  <article class="mini"><span class="tag">Chance game · play credits</span><h3>Margin Duel</h3><p>You and the computer each draw a card from 1 to 20; yours must be at least five higher to win.</p><div class="chips"><span>Static site</span></div><div class="links"><a class="live" href="https://abhisheksinghh23.github.io/playcredit-margin-duel/" target="_blank" rel="noopener">Play / open ↗</a><a href="https://github.com/Abhisheksinghh23/playcredit-margin-duel" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+  <article class="mini"><span class="tag">Chance game · play credits</span><h3>Cave Dig</h3><p>Pick one tile in a 20-tile cave hiding six gems; find a gem to win.</p><div class="chips"><span>Static site</span></div><div class="links"><a class="live" href="https://abhisheksinghh23.github.io/playcredit-cave-dig/" target="_blank" rel="noopener">Play / open ↗</a><a href="https://github.com/Abhisheksinghh23/playcredit-cave-dig" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+  <article class="mini"><span class="tag">Skill game</span><h3>Neon Rail Runner</h3><p>Neon-city runner: lane switching, jumps and slides.</p><div class="chips"><span>Static site</span></div><div class="links"><a class="live" href="https://abhisheksinghh23.github.io/neon-arcade/neon-rail-runner/" target="_blank" rel="noopener">Play / open ↗</a><a href="https://github.com/Abhisheksinghh23/neon-arcade" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+  <article class="mini"><span class="tag">Skill game</span><h3>Rune Forge Duel</h3><p>Tactical 5×5 rune board game against three AI levels.</p><div class="chips"><span>Static site</span></div><div class="links"><a class="live" href="https://abhisheksinghh23.github.io/neon-arcade/rune-forge-duel/" target="_blank" rel="noopener">Play / open ↗</a><a href="https://github.com/Abhisheksinghh23/neon-arcade" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+  <article class="mini"><span class="tag">Chance game · play credits</span><h3>Spirit Lantern Vault</h3><p>Misty temple of glowing lanterns; pick one to reveal it.</p><div class="chips"><span>Static site</span></div><div class="links"><a class="live" href="https://abhisheksinghh23.github.io/neon-arcade/spirit-lantern-vault/" target="_blank" rel="noopener">Play / open ↗</a><a href="https://github.com/Abhisheksinghh23/neon-arcade" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+  <article class="mini"><span class="tag">Chance game · play credits</span><h3>Orbit Beacon</h3><p>Animated solar system; send a probe to a planet.</p><div class="chips"><span>Static site</span></div><div class="links"><a class="live" href="https://abhisheksinghh23.github.io/neon-arcade/orbit-beacon/" target="_blank" rel="noopener">Play / open ↗</a><a href="https://github.com/Abhisheksinghh23/neon-arcade" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+  <article class="mini"><span class="tag">Chance game · play credits</span><h3>Clockwork Heist</h3><p>Brass-gear vault with a lever reveal.</p><div class="chips"><span>Static site</span></div><div class="links"><a class="live" href="https://abhisheksinghh23.github.io/neon-arcade/clockwork-heist/" target="_blank" rel="noopener">Play / open ↗</a><a href="https://github.com/Abhisheksinghh23/neon-arcade" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+ </div>
 </div></section>
 
 <section id="experience" class="alt"><div class="wrap">
